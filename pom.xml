@@ -4,4 +4,21 @@
   <artifactId>MohamedHedfi</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>MohamedHedfi</name>
+  
+  
+  <properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>[4.13.1,)</version>
+		</dependency>
+	</dependencies>
+	
+	
 </project>
