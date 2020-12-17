@@ -54,3 +54,24 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Total time: 2.860 s
 [INFO] Finished at: 2020-12-17T16:48:01+01:00
 [INFO] ------------------------------------------------------------------------
+
+
+
+
+
+Maven Clean :
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< MohamedHedfi:MohamedHedfi >----------------------
+[INFO] Building MohamedHedfi 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ MohamedHedfi ---
+[INFO] Deleting C:\Users\MOHAMED HEDFI\Desktop\SLEAM\eclipse\Projets\MohamedHedfi\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.378 s
+[INFO] Finished at: 2020-12-17T16:50:07+01:00
+[INFO] ------------------------------------------------------------------------
