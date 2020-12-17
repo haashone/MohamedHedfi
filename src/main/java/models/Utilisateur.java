@@ -15,10 +15,10 @@ public class Utilisateur implements Destinataire{
 	private String login;
 	private String motDePasse;
 	private String mail;
-	private List<ServeurDiscussion> serveurs = new ArrayList<ServeurDiscussion>();
+	private List<ServeurDiscussion> serveurs ;
 	
 	public Utilisateur() {
-		
+		serveurs = new ArrayList<ServeurDiscussion>();
 	}
 	
 	

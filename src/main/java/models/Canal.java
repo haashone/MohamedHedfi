@@ -12,10 +12,17 @@ public class Canal implements Comparable<Canal>, Destinataire {
 
 	private int order;
 	private String nom;
-	private Map<Role, List<Utilisateur>> mapping_role_utilisateurs = new HashMap<Role, List<Utilisateur>>();
-	private List<Message> historiques = new ArrayList<Message>();
-	private Map<Role, List<Habilitation>> mapping_role_habilitation = new HashMap<Role, List<Habilitation>>();
-	private List<Webhook> webhooks = new ArrayList<Webhook>();
+	private Map<Role, List<Utilisateur>> mapping_role_utilisateurs ;
+	private List<Message> historiques ;
+	private Map<Role, List<Habilitation>> mapping_role_habilitation;
+	private List<Webhook> webhooks;
+	
+	public Canal() {
+		mapping_role_utilisateurs = new HashMap<Role, List<Utilisateur>>();
+		mapping_role_habilitation = new HashMap<Role, List<Habilitation>>();
+		historiques = new ArrayList<Message>();
+		webhooks = new ArrayList<Webhook>();
+	}
 
 	public int getOrder() {
 		return order;
@@ -66,6 +73,8 @@ public class Canal implements Comparable<Canal>, Destinataire {
 	}
 
 	public void ecrireMessage(Utilisateur u, Message m) {
+		
+		
 		
 		historiques.add(m);
 

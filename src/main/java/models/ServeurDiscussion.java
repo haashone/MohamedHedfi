@@ -7,10 +7,19 @@ import enumerations.Habilitation;
 public class ServeurDiscussion {
 	
 	private String nom;
-	private Map<Role, List<Utilisateur>> mapping_role_utilisateurs = new HashMap<Role, List<Utilisateur>>();
-	private List<Canal> canaux = new ArrayList<Canal>();
-	private Map<Role, List<Habilitation>> mapping_role_habilitation = new HashMap<Role, List<Habilitation>>();
+	private Map<Role, List<Utilisateur>> mapping_role_utilisateurs;
+	private List<Canal> canaux;
+	private Map<Role, List<Habilitation>> mapping_role_habilitation;
 
+	
+	
+	public ServeurDiscussion() {
+		
+		mapping_role_utilisateurs = new HashMap<Role, List<Utilisateur>>();
+		mapping_role_habilitation = new HashMap<Role, List<Habilitation>>();
+		canaux = new ArrayList<Canal>();
+	}
+	
 	
 	public String getNom() {
 		return nom;
@@ -46,10 +55,22 @@ public class ServeurDiscussion {
 
 
 	
-	public ServeurDiscussion() {
+
+	
+	public void AjouterCanaux(Canal c){
+		
+		this.canaux.add(c);
 		
 	}
 	
+	public void AjouterRoleHabilitations(Role r, List<Habilitation> listHabilitation) {
+		this.mapping_role_habilitation.put(r, listHabilitation);
+	}
+	
+	public void AjouterRoleUtilisateur(Role r, List<Utilisateur> listUtilisateur) {
+		
+		this.mapping_role_utilisateurs.put(r, listUtilisateur);
+	}
 	
 	
 	
