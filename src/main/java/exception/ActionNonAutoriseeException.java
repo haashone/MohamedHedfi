@@ -1,6 +1,6 @@
 package exception;
 
-class ActionNonAutoriseeException extends Exception {
+public class ActionNonAutoriseeException extends Exception {
 	ActionNonAutoriseeException() {
 		super();
 	}

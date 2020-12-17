@@ -1,11 +1,22 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import enumerations.Habilitation;
+
 public class Role {
 	
 	private String nomRole;
 	
 	
-	
+	public Role() {
+		
+	}
+	public Role(String nomRole) {
+		this.nomRole = nomRole;
+	}
+
 	
 	@Override
 	public int hashCode() {
@@ -41,8 +52,27 @@ public class Role {
 	}
 
 	
-	
-	public Role() {
+	/**
+	 * Fonction permet de créer un Admin
+	 * Admin possède tous les rôles dans tous ses serveurs de discussions
+	 * 
+	 */
+
+	public void CreerRoleAdmin() {
+		
+		Utilisateur admin = new Utilisateur();
+		Role r = new Role();
+		r.setNomRole("Admin");
+		List<Habilitation> tousHabilitations = new ArrayList<Habilitation>();
+		
+		for(Habilitation h : Habilitation.values()) {
+			tousHabilitations.add(h);
+		}
+		
+		for(ServeurDiscussion sd : admin.getServeurs()){
+			
+			sd.getMapping_role_habilitation().put(r, tousHabilitations);
+		}
 		
 	}
 	
